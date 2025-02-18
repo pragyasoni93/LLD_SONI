@@ -8,8 +8,7 @@ import jakarta.persistence.Table;
 import lombok.*;
 
 @Entity
-@Getter
-@Setter
+@Data
 public class UrlMapping {
 
     @Id
@@ -24,5 +23,21 @@ public class UrlMapping {
     public UrlMapping(String shortUrl, String longUrl){
         this.shortUrl =shortUrl;
         this.longUrl = longUrl;
+    }
+
+    public void setLongUrl(String longUrl) {
+        this.longUrl = longUrl;
+    }
+
+    public void setShortUrl(String shortUrl) {
+        this.shortUrl = shortUrl;
+    }
+
+    public String getShortUrl() {
+        return shortUrl;
+    }
+
+    public String getLongUrl() {
+        return longUrl;
     }
 }
